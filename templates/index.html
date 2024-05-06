@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hepatitis Prediction</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #007bff;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        form {
+            margin-top: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px; /* Decreased font size for labels */
+        }
+        
+        input[type="number"], input[type="email"], select {
+            width: calc(50% - 8px);
+            padding: 6px; /* Decreased padding for inputs */
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            font-size: 12px; /* Decreased font size for inputs */
+        }
+
+        .input-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #0056b3;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px; /* Decreased font size for submit button */
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #003f7f;
+        }
+
+        .error-message {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hepatitis Prediction</h1>
+        <form method="POST" action="/">
+            <div class="input-row">
+                <label for="age">Age:</label>
+                <input type="number" name="age" required>
+            </div>
+            <div class="input-row">
+                <label for="sex">Gender:</label>
+                <select name="sex" required>
+                    <option value="1">Male</option>
+                    <option value="0">Female</option>
+                </select>
+            </div>
+            <div class="input-row">
+                <label for="alb">ALB (Albumin):</label>
+                <input type="number" name="alb" step="0.01" required>
+            </div>
+            <div class="input-row">
+                <label for="alp">ALP (Alkaline Phosphatase):</label>
+                <input type="number" name="alp" step="0.01" required>
+            </div>
+            <div class="input-row">
+                <label for="alt">ALT (Alanine Aminotransferase):</label>
+                <input type="number" name="alt" step="0.01" required>
+            </div>
+            <div class="input-row">
+                <label for="ast">AST (Aspartate Aminotransferase):</label>
+                <input type="number" name="ast" step="0.01" required>
+            </div>
+            <div class="input-row">
+                <label for="bil">BIL (Bilirubin):</label>
+                <input type="number" name="bil" step="0.01" required>
+            </div>
+            <div class="input-row">
+                <label for="che">CHE (Cholinesterase):</label>
+                <input type="number" name="che" step="0.01" required>
+            </div>
+            <div class="input-row">
+                <label for="chol">CHOL (Cholesterol):</label>
+                <input type="number" name="chol" step="0.01" required>
+            </div>
+            <div class="input-row">
+                <label for="crea">CREA (Creatinine):</label>
+                <input type="number" name="crea" step="0.01" required>
+            </div>
+            <div class="input-row">
+                <label for="ggt">GGT (Gamma-Glutamyl Transferase):</label>
+                <input type="number" name="ggt" step="0.01" required>
+            </div>
+            <div class="input-row">
+                <label for="prot">PROT (Total Proteins):</label>
+                <input type="number" name="prot" step="0.01" required>
+            </div>
+            <div class="input-row">
+                <label for="recipient_email">Recipient Email:</label>
+                <input type="email" name="recipient_email" required>
+            </div>
+    
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</body>
+</html>
